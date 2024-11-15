@@ -1,8 +1,12 @@
 package parsing;
 
-public class InstructionParser extends Parser <Object> {
+import datatypes.Instruction;
+import java.util.Queue;
+
+public class InstructionParser extends Parser <Queue<Instruction>> {
+
     @Override
-    public Object parse(String input) {
+    public Queue<Instruction> parse(String input) {
         return null;
     }
 }

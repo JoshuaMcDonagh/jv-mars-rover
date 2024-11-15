@@ -1,8 +1,10 @@
 package parsing;
 
-public class RoverPositionParser extends Parser <Object> {
+import datatypes.RoverPosition;
+
+public class RoverPositionParser extends Parser <RoverPosition> {
     @Override
-    public Object parse(String input) {
+    public RoverPosition parse(String input) {
         return null;
     }
 }

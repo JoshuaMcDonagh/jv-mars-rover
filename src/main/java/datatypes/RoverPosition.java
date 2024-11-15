@@ -1,3 +1,7 @@
 package datatypes;
 
-public record RoverPosition(int x, int y, CompassDirection directionFacing) { }
+public class RoverPosition {
+    private int x;
+    private int y;
+    private CompassDirection directionFacing;
+}

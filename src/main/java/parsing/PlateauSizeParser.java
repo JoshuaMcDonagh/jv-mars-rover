@@ -1,9 +1,11 @@
 package parsing;
 
-public class PlateauSizeParser extends Parser <Object> {
+import datatypes.PlateauSize;
+
+public class PlateauSizeParser extends Parser <PlateauSize> {
 
     @Override
-    public Object parse(String input) {
+    public PlateauSize parse(String input) {
         return null;
     }
 }
