@@ -2,9 +2,11 @@ package parsing;
 
 import datatypes.PlateauSize;
 
-/*
-    Converts raw string input into a PlateauSize object.
-*/
+// NOTE: Plateau size parser will only take String input.
+//       Data validation should be handled with appropriate
+//       verifier before data is passed in.
+//
+//       Verified string will return a RoverPosition with stated values.
 
 public class PlateauSizeParser extends Parser <PlateauSize> {
 

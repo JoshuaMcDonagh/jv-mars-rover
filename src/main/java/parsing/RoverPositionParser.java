@@ -1,14 +1,16 @@
 package parsing;
 
 import datatypes.CompassDirection;
-import datatypes.PlateauSize;
 import datatypes.RoverPosition;
 
-/*
-    Converts raw string input into a RoverPosition object.
-*/
+// NOTE: Rover position parser will only take String input.
+//       Data validation should be handled with appropriate
+//       verifier before data is passed in.
+//
+//       Verified string will return a RoverPosition with stated values.
 
 public class RoverPositionParser extends Parser <RoverPosition> {
+
     @Override
     public RoverPosition parse(String input) {
         String[] positionValueString = input.split(" ");
@@ -25,7 +27,7 @@ public class RoverPositionParser extends Parser <RoverPosition> {
         if (x < 0 && y < 0) {
             x = RoverPosition.DEFAULT_X;
             y = RoverPosition.DEFAULT_Y;
-            System.out.println("Invalid co-ordinate passed. Default values used.\n");
+            System.out.println("Invalid co-ordinates. Default values used.\n");
         } else if (x < 0) {
             x = y;
             System.out.println("Invalid X coordinate. Y has been used for both.\n");
