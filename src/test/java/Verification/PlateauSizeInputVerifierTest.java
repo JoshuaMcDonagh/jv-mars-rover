@@ -140,5 +140,4 @@ class PlateauSizeInputVerifierTest {
 
         assertFalse(result);
     }
-
 }

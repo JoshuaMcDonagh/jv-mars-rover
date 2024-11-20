@@ -12,6 +12,6 @@ public class PlateauSizeInputVerifier extends Verifier {
         Pattern numericPattern = Pattern.compile("^\\d+ \\d+$"); // Checks for numberSPACEnumber
         Matcher matcher = numericPattern.matcher(input);
 
-        return matcher.find(); // True or False depending on regex.
+        return matcher.find(); // True or False depending on match with regex.
     }
 }
