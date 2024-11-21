@@ -9,7 +9,6 @@ import java.util.Queue;
 //       Data validation should be handled with appropriate
 //       verifier before data is passed in.
 //
-//       Null returns an empty queue.
 //       Verified string will return an instruction queue.
 
 public class InstructionParser extends Parser <Queue<Instruction>> {
@@ -17,8 +16,6 @@ public class InstructionParser extends Parser <Queue<Instruction>> {
     @Override
     public Queue<Instruction> parse(String input) {
         Queue<Instruction> outputQueue = new LinkedList<>();
-
-        if(input == null) {return outputQueue;}
 
         for (int i = 0; i < input.length(); i++) {
             switch (input.charAt(i)) {

@@ -18,11 +18,6 @@ public class RoverPositionParser extends Parser <RoverPosition> {
         int y = Integer.parseInt(positionValueString[1]);
         CompassDirection direction;
 
-        // Final handling of invalid input before object creation.
-        //TODO: Potential for this to move into the verification methods.
-        // Interface could be used to add parseVerify() methods to
-        // suitable verifier classes.
-
         // Handles X and Y
         if (x < 0 && y < 0) {
             x = RoverPosition.DEFAULT_X;
