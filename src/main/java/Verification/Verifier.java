@@ -3,10 +3,8 @@ package Verification;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/*
-    Generic verification method. To create further verifiers add
-    assign required pattern to verificationPattern via constructor.
-*/
+// Generic verification method. To create further verifiers,
+// assign required pattern to verificationPattern via constructor.
 
 public abstract class Verifier {
     protected Pattern verificationPattern;
