@@ -1,8 +1,9 @@
 package Verification;
 
+import java.util.regex.Pattern;
+
 public class InstructionInputVerifier extends Verifier {
-    @Override
-    public boolean verify(String input) {
-        return false;
+    public InstructionInputVerifier() {
+        this.verificationPattern = Pattern.compile("^[mrlMRL]*$"); // Checks only instructions are present
     }
 }

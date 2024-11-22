@@ -16,11 +16,6 @@ public class PlateauSizeParser extends Parser <PlateauSize> {
         int x = Integer.parseInt(coordinateValuesString[0]);
         int y= Integer.parseInt(coordinateValuesString[1]);
 
-        // Final handling of invalid input before object creation.
-        //TODO: Potential for this to move into the verification methods.
-        // Interface could be used to add parseVerify() methods to
-        // suitable verifier classes.
-
         if (x <= 0 && y <= 0) {
             x = PlateauSize.DEFAULT_X;
             y = PlateauSize.DEFAULT_Y;

@@ -1,8 +1,9 @@
 package Verification;
 
+import java.util.regex.Pattern;
+
 public class PlateauSizeInputVerifier extends Verifier {
-    @Override
-    public boolean verify(String input) {
-        return false;
+    public PlateauSizeInputVerifier() {
+        this.verificationPattern = Pattern.compile("^\\d+ \\d+$"); // Checks digitSPACEdigit
     }
 }

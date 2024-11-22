@@ -1,8 +1,9 @@
 package Verification;
 
+import java.util.regex.Pattern;
+
 public class RoverPositionInputVerifier extends Verifier {
-    @Override
-    public boolean verify(String input) {
-        return false;
+    public RoverPositionInputVerifier() {
+        this.verificationPattern = Pattern.compile("^\\d+ \\d+ [neswNESW]$"); // Checks digitSPACEdigitSPACEdirection
     }
 }
