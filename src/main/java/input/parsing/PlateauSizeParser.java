@@ -1,6 +1,6 @@
-package parsing;
+package input.parsing;
 
-import datatypes.PlateauSize;
+import entities.environment.PlateauSize;
 
 // NOTE: Plateau size parser will only take String input.
 //       Data validation should be handled with appropriate

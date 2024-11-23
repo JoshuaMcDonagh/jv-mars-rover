@@ -1,4 +1,4 @@
-package parsing;
+package input.parsing;
 
 import datatypes.CompassDirection;
 import datatypes.RoverPosition;

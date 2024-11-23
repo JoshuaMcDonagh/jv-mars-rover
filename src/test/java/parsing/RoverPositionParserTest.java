@@ -1,8 +1,8 @@
 package parsing;
 
 import datatypes.CompassDirection;
-import datatypes.PlateauSize;
 import datatypes.RoverPosition;
+import input.parsing.RoverPositionParser;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

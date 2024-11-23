@@ -1,7 +1,5 @@
 package datatypes;
 
-import vehicles.Rover;
-
 public class RoverPosition {
     private int x;
     private int y;

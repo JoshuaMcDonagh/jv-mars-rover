@@ -1,4 +1,4 @@
-package vehicles;
+package entities.vehicles;
 
 public class OperationControl {
 }
