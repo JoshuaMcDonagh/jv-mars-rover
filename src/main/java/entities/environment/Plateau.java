@@ -5,7 +5,7 @@ package entities.environment;
 
 import entities.Entity;
 
-public class Plateau {
+public class Plateau{
     private static PlateauSize size;
     private static Plateau instance;
     private static Entity[][][] plateauGrid;
@@ -23,5 +23,9 @@ public class Plateau {
 
     public PlateauSize getSize() {
         return size;
+    }
+
+    public static Entity[][][] getPlateauGrid() {
+        return plateauGrid;
     }
 }
