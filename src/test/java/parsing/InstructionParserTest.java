@@ -1,7 +1,7 @@
 package parsing;
 
 import datatypes.Instruction;
-import datatypes.PlateauSize;
+import input.parsing.InstructionParser;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

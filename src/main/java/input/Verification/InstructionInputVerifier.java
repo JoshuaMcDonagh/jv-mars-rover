@@ -1,4 +1,4 @@
-package Verification;
+package input.Verification;
 
 import java.util.regex.Pattern;
 

@@ -1,10 +1,9 @@
 package parsing;
 
-import datatypes.PlateauSize;
+import entities.environment.PlateauSize;
+import input.parsing.PlateauSizeParser;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
-import java.util.InputMismatchException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
