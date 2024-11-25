@@ -71,4 +71,12 @@ public class RoverPosition {
                 break;
         }
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        RoverPosition that = (RoverPosition) o;
+        return x == that.x && y == that.y;
+    }
+
 }

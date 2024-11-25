@@ -1,7 +1,10 @@
 package entities.vehicles;
 
 import datatypes.RoverPosition;
+import entities.environment.Plateau;
+import entities.environment.PlateauSize;
 
+import javax.management.openmbean.InvalidKeyException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -9,8 +12,9 @@ import java.util.Map;
 // by multiple rovers.
 
 public class OperationControl {
-    private Map<String, RoverPosition> operationalRoverPositions= new HashMap<>();
+    private Map<String, RoverPosition> operationalRoverPositions = new HashMap<>();
     private static OperationControl instance;
+    private final PlateauSize plateauSize = Plateau.getSize();
 
     private OperationControl() {}
 
@@ -21,22 +25,30 @@ public class OperationControl {
         return instance;
     }
 
-    public void addRover(String roverID, RoverPosition position) {
-        // Add rover for position tracking
+    public void updateRoverPosition(String roverID, RoverPosition position) {
+        operationalRoverPositions.put(roverID, position);
     }
 
-    private void updatePosition(RoverPosition position) {
-        // Update Rover position
-    }
-
-    public RoverPosition getCurrentRoverPosition(String requestingRoverID) {
+    public RoverPosition getCurrentRoverPosition(String requestingRoverID) throws InvalidKeyException {
         // Returns correct rover position.
-        return null;
+        if(operationalRoverPositions.containsKey(requestingRoverID)) {
+            return operationalRoverPositions.get(requestingRoverID);
+        } else {
+            throw new InvalidKeyException();
+        }
     }
 
     public boolean validateRoverDestinationRequest(RoverPosition position) {
         // Validate co-ordinate is in bounds and has no other entities within.
-        return true;
+        boolean isInBounds =
+                position.getX() <= plateauSize.x() &&
+                position.getY() <= plateauSize.y() &&
+                position.getX() >= 0 &&
+                position.getY() >= 0;
+
+        boolean isFreeSpace = !operationalRoverPositions.containsValue(position);
+
+        return isInBounds && isFreeSpace;
     }
 
 }

@@ -29,11 +29,13 @@ public class Plateau{
         return instance;
     }
 
-    public PlateauSize getSize() {
+    public static PlateauSize getSize() {
         return size;
     }
 
-    public void updateEntityPosition(Entity entity, RoverPosition position, RoverPosition originalPosition) {
+
+
+    public static void updateEntityPosition(Entity entity, RoverPosition position, RoverPosition originalPosition) {
             plateauGrid[position.getX()] [position.getY()] [0] = entity;
             plateauGrid[originalPosition.getX()] [originalPosition.getY()] [0] = null;
     }
