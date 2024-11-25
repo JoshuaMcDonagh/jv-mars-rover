@@ -1,5 +1,5 @@
 package datatypes;
 
 public enum EntityIDPrefix {
-    RV; // Rover
+    RV // Rover
 }
